@@ -12,6 +12,7 @@
     WHEN 6 THEN 'Sabtu'
     WHEN 7 THEN 'Minggu'
     END AS hari2 FROM ((`b_ms_jadwal_dokter` INNER JOIN b_ms_pegawai ON b_ms_jadwal_dokter.dokter_id = b_ms_pegawai.id) INNER JOIN b_ms_unit ON b_ms_jadwal_dokter.unit_id = b_ms_unit.id)  WHERE b_ms_unit.id='{$k}' AND b_ms_jadwal_dokter.aktif = 1 ORDER BY hari ASC, dokter_id ASC " ;
+    // MENCOBA DENGAN MENGGUNAKAN INPUTAN USER LALU DIMASUKKAN KE DALAM QUERY LALU DILAKUKAN SELECT SESUAI INPUTAN USER YANG DIINGINKAN
     $resultSet = $conn->query($sql);
         while($emp = mysqli_fetch_assoc($resultSet)){
             ?>
