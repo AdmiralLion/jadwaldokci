@@ -29,7 +29,7 @@
               
           </select>
           <label for="hari">Pilih Hari</label>
-</div>
+          </div>
           <br><br>
           <?php 
           require ("koneksi.php");
@@ -48,16 +48,6 @@
           ?>
           <br><br>
         <hr/>
-        <?php
-          // require("koneksi.php");
-          // $x = 0;
-          // $sql = "SELECT hari FROM b_ms_jadwal_dokter";
-          // $result = $conn->query($sql);
-          // if ($result->num_rows > 0) {
-			    //   while($row = $result->fetch_assoc()) {
-          // while($x < 7){
-          //   $x++;
-            ?>
               <table class="table table-striped">
                 <thead>
                   <th class='hidden'>ID</th>
