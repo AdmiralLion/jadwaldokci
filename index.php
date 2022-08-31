@@ -16,35 +16,44 @@
       <div class="container">
         <div class="container-fluid">
         <h1 style="text-align:center">Jadwal Dokter</h1>
-          <p>Unit Pelayanan</p>
-          <div class="col-sm-12">
-            <select name="hari" id="hari" onchange="selectHari()" class="selectpicker" data-style='btn-info'>
-              <option value="1">Senin</option>
-              <option value="2">Selasa</option>
-              <option value="3">Rabu</option>
-              <option value="4">Kamis</option>
-              <option value="5">Jumat</option>
-              <option value="6">Sabtu</option>
-              <option value="7">Minggu</option>
-          </select>
-          <label for="hari">Pilih Hari</label>
-          </div>
-          <br><br>
-          <?php 
-          require ("koneksi.php");
-          $sql = "SELECT * from b_ms_unit WHERE nama LIKE 'Poli%' AND aktif=1 GROUP BY nama";
-          $result = $conn->query($sql);
-          
-          echo "<select id='dokter' onchange='selectDokter()' class='selectpicker col-md-12' data-live-search='true' data-style='btn-success' >";
-          if ($result->num_rows > 0) {
-             while($rows = $result->fetch_assoc()) {
-              echo "<option selected='selected' value=".$rows['id'].">".$rows['nama']."</option>";
-              }
-            }
-            
-          echo "</select>";
-          
-          ?>
+        <br><br>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+              <h3 class="col-sm-6">Unit Pelayanan</h3>
+              </div>
+              <div class="col">
+              <h3 class="col-sm-6">Pilih hari</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+              <?php 
+                require ("koneksi.php");
+                $sql = "SELECT * from b_ms_unit WHERE nama LIKE 'Poli%' AND aktif=1 GROUP BY nama";
+                $result = $conn->query($sql);
+                echo "<select id='dokter' onchange='selectDokter()' class='selectpicker col-sm-12' data-live-search='true' data-style='btn-success btn-lg' >";
+                if ($result->num_rows > 0) {
+                  while($rows = $result->fetch_assoc()) {
+                    echo "<option selected='selected' value=".$rows['id'].">".$rows['nama']."</option>";
+                    }
+                  }
+                  
+                echo "</select>";
+                ?>
+              </div>
+              <div class="col-6">
+              <select name="hari" id="hari" onchange="selectHari()" class="selectpicker col-sm-12" data-style='btn-info btn-lg'>
+                  <option value="1">Senin</option>
+                  <option value="2">Selasa</option>
+                  <option value="3">Rabu</option>
+                  <option value="4">Kamis</option>
+                  <option value="5">Jumat</option>
+                  <option value="6">Sabtu</option>
+                  <option value="7">Minggu</option>
+                </select>
+              </div>
+                </div>
           <br><br>
         <hr/>
               <table class="table table-striped">
@@ -59,12 +68,11 @@
               </tbody>
           </table>
                 <?php 
-              ?> 
+              ?>
+              <br><br>
+              <a href="#" class="btn btn-success">Kembali</a> 
         </div>
-        <a href="#" class="btn btn-success">Kembali</a>
-        <p></p>
         </div>
-
     </div>
   </div>
 </body>
