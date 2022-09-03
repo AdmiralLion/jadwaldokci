@@ -15,7 +15,7 @@
     <div class="card-body">
       <div class="container">
         <div class="container-fluid">
-        <h1 style="text-align:center">Jadwal Dokter</h1>
+        <h2 style="text-align:center">Jadwal Dokter</h2>
         <br><br>
           <div class="container">
             <div class="row">
@@ -71,6 +71,7 @@
               ?>
               <br><br>
               <a href="#" class="btn btn-success">Kembali</a> 
+              <br><br>
         </div>
         </div>
     </div>

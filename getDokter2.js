@@ -15,6 +15,7 @@ function selectDokter(){
             id : x,
             hari : y1
         },
+        async: false,
         success:function(data){
             $("#coba").html(data);
             $(".hidden").hide();
