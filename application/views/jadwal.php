@@ -46,7 +46,7 @@
                 </div>
           <br><br>
         <hr/>
-              <table class="table table-striped">
+              <!-- <table class="table table-striped">
                 <thead>
                   <th class='hidden'>ID</th>
                   <th>Nama Dokter</th>
@@ -54,9 +54,11 @@
                   <th>Jam Selesai</th>
                   <th>Hari</th>
               </thead>
-              <tbody id="coba">
-              </tbody>
-          </table>
+
+          </table> -->
+
+          <div class="result-table">
+    </div>
                 <?php 
               ?>
               <br><br>
@@ -65,6 +67,32 @@
         </div>
     </div>
   </div>
-</body>
 
+</body>
+<script>
+    function selectHari(){
+        var y = document.getElementById("hari").value;
+        console.log(y);
+        return y;
+    } 
+function selectDokter(){
+    var x = document.getElementById("dokter").value;
+    var y1 = selectHari()
+    // var base_url='http://localhost/jadwaldokci/'
+    console.log(x);
+    $.ajax({
+        url:"jadwal/tampil",
+        // url: base_url + "jadwal/tampil",
+        method: "POST",
+        data:{
+            id : x,
+            hari : y1
+        },
+        async: false,
+        success:function(data){
+            $(".result-table").html(data);
+        }
+        })
+    }
+</script>
 </html>

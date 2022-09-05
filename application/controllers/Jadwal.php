@@ -23,8 +23,15 @@ class Jadwal extends CI_Controller
 	{
 		$data = $this->input->post();
 		$this->load->model('jadwal_model');
-		$data['id'] = $this->jadwal_model->get_dokter(); 
-		$data['hari'] = $this->jadwal_model->get_dokter(); 
-		$this->load->view('jadwal.php', $data);;
+		$get_data = $this->jadwal_model->get_dokter(); 
+
+		if($get_data->num_rows()==0){
+			$data['result'] = $get_data->result();
+			$this->load->view('jadwalkosong.php',$data);
+		}else {
+			$data['result'] = $get_data->result();
+			$this->load->view('jadwaltampil.php', $data);
+		}
 	}
+	
 }

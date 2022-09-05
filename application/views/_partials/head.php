@@ -9,4 +9,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-  <script type="text/javascript" src="<?= base_url('assets/js/getDokter2.js') ?>"></script>
+  <!-- <script type="text/javascript" src="<?= base_url('assets/js/getDokter2.js') ?>"></script> -->
