@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <table class="table table-striped">
                 <thead>
                   <th class='hidden'>ID</th>

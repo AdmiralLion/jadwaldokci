@@ -6,6 +6,7 @@
 </head>
 
 <body class="background-col">
+  
 <div class="card col-sm-9 align-middle">
   <img class="card-img-top" src="<?= base_url('assets/image/bg.jpg')?>" alt="Card image cap">
     <div class="card-body">
@@ -46,28 +47,15 @@
                 </div>
           <br><br>
         <hr/>
-              <!-- <table class="table table-striped">
-                <thead>
-                  <th class='hidden'>ID</th>
-                  <th>Nama Dokter</th>
-                  <th>Jam Mulai</th>
-                  <th>Jam Selesai</th>
-                  <th>Hari</th>
-              </thead>
-
-          </table> -->
-
           <div class="result-table">
     </div>
-                <?php 
-              ?>
-              <br><br>
+              <br>
               <a href="#" class="btn btn-success">Kembali</a> 
         </div>
         </div>
     </div>
   </div>
-
+  
 </body>
 <script>
     function selectHari(){
